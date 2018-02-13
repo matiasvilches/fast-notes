@@ -1,7 +1,7 @@
 Fast Notes
 =============
 
-![Screenshot](fast-notes.png)
+![](fast-notes.png)
 
 **Spanish** / English
 
