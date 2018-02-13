@@ -27,6 +27,8 @@ Instalación:
 	```
 	meteor update
 	meteor npm install
+	meteor npm install --save @babel/runtime
+	meteor npm install --save bcrypt
 	meteor
 	```
 
@@ -56,10 +58,13 @@ Installation:
 	cd fast-notes
 	```
 
-3. Enter the following commands.
+3. Execute the following commands.
 	```
 	meteor update
 	meteor npm install
+	meteor npm install --save @babel/runtime
+	meteor npm install --save bcrypt
 	meteor
 	```
+
 4. Play with the web application :)
