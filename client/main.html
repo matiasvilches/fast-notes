@@ -1,0 +1,70 @@
+<head>
+  <title>Notas</title>
+  <link rel="shortcut icon" href="img/note2.ico">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+
+<body>
+  <nav class="red">
+    <div class="container">
+      <div class="nav-wrapper">
+        <a href="#" class="brand-logo">App Meteor</a>
+        <ul id="nav-mobile" class="right hide-on-med-and-down">
+          {{#if currentUser}}
+            <li class="nav-item">
+              <a class="waves-effect waves-light btn modal-trigger" href="#addModal">Agregar nota</a>
+            </li>
+          {{/if}}
+          <li class="nav-item">
+          {{> loginButtons}}
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <div class="container">
+    <header>
+      <h2>Notas rápidas...</h2>
+    </header>
+    {{#if currentUser}}
+      <!-- Muestra las notas desde MongoDB -->
+      <ul class="collection">
+        {{#each appmeteor}}
+          {{> notas}}
+        {{/each}}
+      </ul>
+      {{else}}
+      <p>Por favor inicia sesión para administrar tus notas.</p>
+    {{/if}}
+  </div>
+  {{> add}}
+  <script>
+    // Despliega pantalla para agregar notas
+    $(document).ready(function() {
+      $('.modal').modal();
+    });
+  </script>
+</body>
+
+<!-- Notas -->
+<template name="notas">
+  <li class="collection-item">
+    {{text}} {{title}} / <i>Agregada por {{username}}</i>
+    <a href="#" class="delete-note secondary-content">
+      <i class="material-icons">close</i>
+    </a>
+  </li>
+</template>
+
+<!-- Pantalla de despliegue -->
+<template name="add">
+  <div id="addModal" class="modal">
+    <div class="modal-content">
+      <h3>Agregar Nota </h3>
+      <form class="add-form">
+        <input type="text" name="text" placeholder="Escribe aquí..." required autofocus>
+      </form>
+      <i>* Presiona enter para ingresar *</i>
+    </div>
+  </div>
+</template>
