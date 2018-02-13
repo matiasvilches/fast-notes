@@ -1,6 +1,8 @@
 Fast Notes
 =============
 
+![Screenshot](fast-notes.png)
+
 **Spanish** / English
 
 Hola, mi nombre es Matías Vilches ([matiasvilches](https://github.com/matiasvilches) en github) y les quiero compartir este proyecto que realicé paso a paso siguiendo un tutorial en Youtube.
